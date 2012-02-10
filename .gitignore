@@ -1,0 +1,6 @@
+.bundle
+log/*.log
+log/
+tmp/
+doc/
+.sass-cache/*
