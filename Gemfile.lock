@@ -1,0 +1,46 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (3.0.0)
+    diff-lcs (1.1.3)
+    grit (2.5.0)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+      posix-spawn (~> 0.3.6)
+    i18n (0.6.0)
+    mail (2.4.4)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.18)
+    polyglot (0.3.3)
+    pony (1.4)
+      mail (> 2.0)
+    posix-spawn (0.3.6)
+    rack (1.4.1)
+    rack-protection (1.2.0)
+      rack
+    sass (3.1.18)
+    shotgun (0.9)
+      rack (>= 1.0)
+    sinatra (1.3.2)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    tilt (1.3.3)
+    treetop (1.4.10)
+      polyglot
+      polyglot (>= 0.3.1)
+    xml-sitemap (1.2.2)
+      builder (>= 2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  grit
+  pony
+  sass
+  shotgun
+  sinatra
+  xml-sitemap

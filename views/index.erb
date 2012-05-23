@@ -1,0 +1,20 @@
+<h1>TODO</h1>
+
+<form action="repo" method="get" accept-charset="utf-8">
+
+    <label for="repo_url">Repo</label><input type="text" name="repo_url" value="" id="repo_url" />
+    
+
+    <p><input type="submit" value="Continue &rarr;"></p>
+</form>
+
+<section id="repo">
+    <%= params[:repo_url] %>
+    <%# @process.inspect.to_s if @process %>
+</section>
+
+<hr />
+
+<section id="todos">
+    <%= @todos if @todos %>
+</section>
