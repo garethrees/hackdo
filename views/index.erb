@@ -1,20 +1,25 @@
-<h1>TODO</h1>
+<form action="repo" method="get" accept-charset="utf-8" class="submit-repo">
 
-<form action="repo" method="get" accept-charset="utf-8">
+    <label for="repo">github.com/</label><input type="text" name="repo" value="" id="repo" placeholder="rails/rails"/>
+    <input type="submit" value="Find TODOs &rarr;">
 
-    <label for="repo_url">Repo</label><input type="text" name="repo_url" value="" id="repo_url" />
-    
-
-    <p><input type="submit" value="Continue &rarr;"></p>
 </form>
 
-<section id="repo">
-    <%= params[:repo_url] %>
-    <%# @process.inspect.to_s if @process %>
-</section>
+<% if @repo %>
+  <section id="repo">
+      TODOs for: <a href="http://github.com/<%= @repo %>">http://github.com/<%= @repo %></a>
+  </section>
+<% end %>
 
 <hr />
 
-<section id="todos">
-    <%= @todos if @todos %>
-</section>
+<% if @todos %>
+  <section id="todos">
+    <% @todos.each do |todo| %>
+      <% todo.each_pair do |k, v| %>
+        <% line_url = "http://github.com/#{@repo}/blob/master" + k.gsub("/Users/gareth/Code/hackdo/tmp/#{@tmp_folder}", "") + "#L#{v.first.line}" %>
+        <p><a href="<%= line_url %>"><%= k.gsub("/Users/gareth/Code/hackdo/tmp/#{@tmp_folder}", "") %> [<%= v.first.line %>]</a> <%= v.first.tag.upcase %>: <%= v.first.text %></p>
+      <% end %>
+    <% end %>
+  </section>
+<% end %>

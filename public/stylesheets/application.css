@@ -1,0 +1,17 @@
+body {
+  font-family: Monaco, monospace;
+  margin: 20px auto;
+  max-width: 900px;
+  min-width: 600px;
+  width: 100%; }
+
+.submit-repo {
+  margin-bottom: 1em; }
+  .submit-repo label {
+    font-size: 16px; }
+  .submit-repo input[type=text] {
+    border: 2px solid #4183C4;
+    color: #444;
+    font-size: 18px;
+    padding: 0.4em;
+    width: 480px; }
